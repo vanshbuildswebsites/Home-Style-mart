@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-    <!-- FontAwesome for Icons -->
+    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
@@ -25,7 +25,6 @@
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        /* Base Reset */
         *, *::before, *::after {
             box-sizing: border-box;
             margin: 0;
@@ -253,7 +252,7 @@
             color: var(--text-dark);
         }
 
-        /* Generic Image Slot Box */
+        /* Generic Image Slot Styles */
         .img-slot {
             width: 100%;
             border-radius: 12px;
@@ -265,21 +264,21 @@
             justify-content: center;
             color: var(--primary-wood);
             text-align: center;
-            padding: 30px 20px;
+            padding: 20px 15px;
             position: relative;
             overflow: hidden;
             box-shadow: var(--shadow);
         }
 
         .img-slot i {
-            font-size: 2.5rem;
-            margin-bottom: 12px;
+            font-size: 2.2rem;
+            margin-bottom: 8px;
             opacity: 0.8;
         }
 
         .img-slot span {
             font-weight: 600;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
         }
 
         .img-slot small {
@@ -297,17 +296,10 @@
             object-fit: cover;
         }
 
-        .hero-img-height {
-            min-height: 380px;
-        }
-
-        .about-img-height {
-            min-height: 350px;
-        }
-
-        .gallery-img-height {
-            min-height: 220px;
-        }
+        .hero-img-height { min-height: 380px; }
+        .about-img-height { min-height: 350px; }
+        .card-img-height { min-height: 180px; margin-bottom: 20px; border-radius: 8px; }
+        .gallery-img-height { min-height: 220px; }
 
         /* Section Global */
         section {
@@ -351,7 +343,7 @@
         .product-card {
             background-color: var(--bg-light);
             border-radius: 10px;
-            padding: 30px;
+            padding: 20px;
             transition: var(--transition);
             border: 1px solid var(--border-color);
             display: flex;
@@ -365,19 +357,6 @@
             border-color: var(--accent-amber);
         }
 
-        .product-icon {
-            width: 50px;
-            height: 50px;
-            background-color: #EFE6DD;
-            color: var(--primary-wood);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.4rem;
-            margin-bottom: 20px;
-        }
-
         .product-card h3 {
             font-size: 1.3rem;
             margin-bottom: 10px;
@@ -387,7 +366,6 @@
         .product-card p {
             color: var(--text-muted);
             font-size: 0.95rem;
-            margin-bottom: 20px;
         }
 
         /* About Section */
@@ -428,7 +406,7 @@
             margin-top: 4px;
         }
 
-        /* Gallery Slots */
+        /* Gallery Grid */
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -660,7 +638,7 @@
 
     <!-- Main Content -->
     <main>
-        <!-- Hero Section -->
+        <!-- Slot 1: Hero Section -->
         <section class="hero" id="home">
             <div class="hero-content">
                 <div class="hero-badge">
@@ -690,16 +668,16 @@
                 </div>
             </div>
             
-            <!-- Hero Image Slot -->
+            <!-- SLOT 1 -->
             <div class="img-slot hero-img-height">
                 <i class="fa-solid fa-image"></i>
-                <span>Main Showroom Image Slot</span>
+                <span>Slot 1: Main Showroom Image</span>
                 <small>./images/hero-showroom.jpg</small>
                 <img src="./images/hero-showroom.jpg" alt="Showroom Main" onerror="this.style.display='none';">
             </div>
         </section>
 
-        <!-- Products / Collections Section -->
+        <!-- Slots 3 to 8: Products / Collections Section -->
         <section class="products-bg" id="products">
             <div class="section-header">
                 <span class="section-subtitle">Our Collections</span>
@@ -707,57 +685,81 @@
             </div>
 
             <div class="grid-3">
+                <!-- SLOT 3 -->
                 <div class="product-card">
-                    <div>
-                        <div class="product-icon"><i class="fa-solid fa-couch"></i></div>
-                        <h3>Living Room</h3>
-                        <p>Comfortable sofa sets, center tables, and lounge seating curated to elevate your family space.</p>
+                    <div class="img-slot card-img-height">
+                        <i class="fa-solid fa-couch"></i>
+                        <span>Slot 3: Living Room</span>
+                        <small>./images/cat-living.jpg</small>
+                        <img src="./images/cat-living.jpg" alt="Living Room" onerror="this.style.display='none';">
                     </div>
+                    <h3>Living Room</h3>
+                    <p>Comfortable sofa sets, center tables, and lounge seating curated to elevate your family space.</p>
                 </div>
 
+                <!-- SLOT 4 -->
                 <div class="product-card">
-                    <div>
-                        <div class="product-icon"><i class="fa-solid fa-bed"></i></div>
-                        <h3>Bedroom Furniture</h3>
-                        <p>Durable bedframes, mattresses, wardrobes, and bedside setups engineered for ultimate comfort.</p>
+                    <div class="img-slot card-img-height">
+                        <i class="fa-solid fa-bed"></i>
+                        <span>Slot 4: Bedroom</span>
+                        <small>./images/cat-bedroom.jpg</small>
+                        <img src="./images/cat-bedroom.jpg" alt="Bedroom Furniture" onerror="this.style.display='none';">
                     </div>
+                    <h3>Bedroom Furniture</h3>
+                    <p>Durable bedframes, mattresses, wardrobes, and bedside setups engineered for ultimate comfort.</p>
                 </div>
 
+                <!-- SLOT 5 -->
                 <div class="product-card">
-                    <div>
-                        <div class="product-icon"><i class="fa-solid fa-utensils"></i></div>
-                        <h3>Dining Sets</h3>
-                        <p>Elegant dining tables and comfortable seating sets designed for long-lasting family moments.</p>
+                    <div class="img-slot card-img-height">
+                        <i class="fa-solid fa-utensils"></i>
+                        <span>Slot 5: Dining Sets</span>
+                        <small>./images/cat-dining.jpg</small>
+                        <img src="./images/cat-dining.jpg" alt="Dining Sets" onerror="this.style.display='none';">
                     </div>
+                    <h3>Dining Sets</h3>
+                    <p>Elegant dining tables and comfortable seating sets designed for long-lasting family moments.</p>
                 </div>
 
+                <!-- SLOT 6 -->
                 <div class="product-card">
-                    <div>
-                        <div class="product-icon"><i class="fa-solid fa-lightbulb"></i></div>
-                        <h3>Fancy Lights</h3>
-                        <p>Decorative hanging lights, modern chandeliers, and accent lighting choices to brighten your home.</p>
+                    <div class="img-slot card-img-height">
+                        <i class="fa-solid fa-lightbulb"></i>
+                        <span>Slot 6: Fancy Lights</span>
+                        <small>./images/cat-lights.jpg</small>
+                        <img src="./images/cat-lights.jpg" alt="Fancy Lights" onerror="this.style.display='none';">
                     </div>
+                    <h3>Fancy Lights</h3>
+                    <p>Decorative hanging lights, modern chandeliers, and accent lighting choices to brighten your home.</p>
                 </div>
 
+                <!-- SLOT 7 -->
                 <div class="product-card">
-                    <div>
-                        <div class="product-icon"><i class="fa-solid fa-rug"></i></div>
-                        <h3>Home Furnishings</h3>
-                        <p>A variety of tasteful decor items and furnishings to complete your home's unique interior look.</p>
+                    <div class="img-slot card-img-height">
+                        <i class="fa-solid fa-rug"></i>
+                        <span>Slot 7: Home Furnishings</span>
+                        <small>./images/cat-decor.jpg</small>
+                        <img src="./images/cat-decor.jpg" alt="Home Furnishings" onerror="this.style.display='none';">
                     </div>
+                    <h3>Home Furnishings</h3>
+                    <p>A variety of tasteful decor items and furnishings to complete your home's unique interior look.</p>
                 </div>
 
+                <!-- SLOT 8 -->
                 <div class="product-card">
-                    <div>
-                        <div class="product-icon"><i class="fa-solid fa-store"></i></div>
-                        <h3>Custom Selection</h3>
-                        <p>Visit our showroom to explore full catalogues and diverse modern design varieties in person.</p>
+                    <div class="img-slot card-img-height">
+                        <i class="fa-solid fa-store"></i>
+                        <span>Slot 8: Custom Work</span>
+                        <small>./images/cat-custom.jpg</small>
+                        <img src="./images/cat-custom.jpg" alt="Custom Selection" onerror="this.style.display='none';">
                     </div>
+                    <h3>Custom Selection</h3>
+                    <p>Visit our showroom to explore full catalogues and diverse modern design varieties in person.</p>
                 </div>
             </div>
         </section>
 
-        <!-- About Section -->
+        <!-- Slot 2: About Section -->
         <section id="about">
             <div class="about-container">
                 <div class="about-content">
@@ -791,17 +793,17 @@
                     </div>
                 </div>
 
-                <!-- About Image Slot -->
+                <!-- SLOT 2 -->
                 <div class="img-slot about-img-height">
                     <i class="fa-solid fa-store"></i>
-                    <span>Store Entrance / Interior Slot</span>
+                    <span>Slot 2: Store Entrance / About</span>
                     <small>./images/about-store.jpg</small>
                     <img src="./images/about-store.jpg" alt="About Store" onerror="this.style.display='none';">
                 </div>
             </div>
         </section>
 
-        <!-- Gallery Section -->
+        <!-- Slots 9 to 12: Gallery Section -->
         <section class="products-bg" id="gallery">
             <div class="section-header">
                 <span class="section-subtitle">Showroom Showcase</span>
@@ -809,31 +811,31 @@
             </div>
 
             <div class="gallery-grid">
-                <!-- Gallery Slot 1 -->
+                <!-- SLOT 9 -->
                 <div class="img-slot gallery-img-height">
                     <i class="fa-solid fa-image"></i>
-                    <span>Gallery Slot 1</span>
+                    <span>Slot 9: Gallery Photo 1</span>
                     <small>./images/gallery-1.jpg</small>
                     <img src="./images/gallery-1.jpg" alt="Gallery 1" onerror="this.style.display='none';">
                 </div>
-                <!-- Gallery Slot 2 -->
+                <!-- SLOT 10 -->
                 <div class="img-slot gallery-img-height">
                     <i class="fa-solid fa-image"></i>
-                    <span>Gallery Slot 2</span>
+                    <span>Slot 10: Gallery Photo 2</span>
                     <small>./images/gallery-2.jpg</small>
                     <img src="./images/gallery-2.jpg" alt="Gallery 2" onerror="this.style.display='none';">
                 </div>
-                <!-- Gallery Slot 3 -->
+                <!-- SLOT 11 -->
                 <div class="img-slot gallery-img-height">
                     <i class="fa-solid fa-image"></i>
-                    <span>Gallery Slot 3</span>
+                    <span>Slot 11: Gallery Photo 3</span>
                     <small>./images/gallery-3.jpg</small>
                     <img src="./images/gallery-3.jpg" alt="Gallery 3" onerror="this.style.display='none';">
                 </div>
-                <!-- Gallery Slot 4 -->
+                <!-- SLOT 12 -->
                 <div class="img-slot gallery-img-height">
                     <i class="fa-solid fa-image"></i>
-                    <span>Gallery Slot 4</span>
+                    <span>Slot 12: Gallery Photo 4</span>
                     <small>./images/gallery-4.jpg</small>
                     <img src="./images/gallery-4.jpg" alt="Gallery 4" onerror="this.style.display='none';">
                 </div>
