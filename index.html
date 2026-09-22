@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Style Furniture Mart | Khatima, Uttarakhand</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-wood: #8B5A2B;
+            --primary-dark: #2C1A11;
+            --accent-amber: #D4A373;
+            --bg-light: #F9F6F0;
+            --text-dark: #1F1914;
+            --text-muted: #665A52;
+            --white: #FFFFFF;
+            --border-color: #E8DFD8;
+            --shadow: 0 10px 30px rgba(44, 26, 17, 0.08);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Base Reset */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, .serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Demo Notice Banner */
+        .demo-banner {
+            background-color: var(--primary-dark);
+            color: var(--accent-amber);
+            text-align: center;
+            padding: 8px 15px;
+            font-size: 0.825rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        /* Header / Navbar */
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 20px;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            letter-spacing: -0.5px;
+        }
+
+        .logo-sub {
+            font-size: 0.75rem;
+            color: var(--primary-wood);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-wood);
+        }
+
+        .nav-cta {
+            background-color: var(--primary-wood);
+            color: var(--white) !important;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: 600 !important;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-cta:hover {
+            background-color: var(--primary-dark);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary-dark);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 70px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #EFE6DD;
+            color: var(--primary-wood);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            line-height: 1.15;
+            color: var(--primary-dark);
+            margin-bottom: 20px;
+        }
+
+        .hero-description {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+            max-width: 500px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 35px;
+        }
+
+        .btn {
+            padding: 14px 28px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-wood);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 1.5px solid var(--primary-wood);
+            color: var(--primary-wood);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-wood);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        .hero-rating {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding-top: 15px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .stars {
+            color: #F59E0B;
+            font-size: 1.1rem;
+        }
+
+        .rating-text {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        /* Generic Image Slot Box */
+        .img-slot {
+            width: 100%;
+            border-radius: 12px;
+            background: #EFE6DD;
+            border: 2px dashed var(--accent-amber);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-wood);
+            text-align: center;
+            padding: 30px 20px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .img-slot i {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+            opacity: 0.8;
+        }
+
+        .img-slot span {
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .img-slot small {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        .img-slot img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-img-height {
+            min-height: 380px;
+        }
+
+        .about-img-height {
+            min-height: 350px;
+        }
+
+        .gallery-img-height {
+            min-height: 220px;
+        }
+
+        /* Section Global */
+        section {
+            padding: 80px 20px;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 50px auto;
+        }
+
+        .section-subtitle {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.8rem;
+            color: var(--primary-wood);
+            font-weight: 700;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .section-title {
+            font-size: 2.25rem;
+            color: var(--primary-dark);
+        }
+
+        /* Products Section */
+        .products-bg {
+            background-color: var(--white);
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background-color: var(--bg-light);
+            border-radius: 10px;
+            padding: 30px;
+            transition: var(--transition);
+            border: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+            border-color: var(--accent-amber);
+        }
+
+        .product-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #EFE6DD;
+            color: var(--primary-wood);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+        }
+
+        .product-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--primary-dark);
+        }
+
+        .product-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        /* About Section */
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-content h2 {
+            font-size: 2.25rem;
+            color: var(--primary-dark);
+            margin-bottom: 20px;
+        }
+
+        .about-content p {
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+
+        .feature-list {
+            margin-top: 25px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+
+        .feature-item i {
+            color: var(--primary-wood);
+            margin-top: 4px;
+        }
+
+        /* Gallery Slots */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Contact Section */
+        .contact-bg {
+            background-color: var(--white);
+        }
+
+        .contact-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .info-card {
+            background-color: var(--bg-light);
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        .info-card h3 {
+            font-size: 1.5rem;
+            color: var(--primary-dark);
+            margin-bottom: 25px;
+        }
+
+        .info-item {
+            display: flex;
+            gap: 18px;
+            margin-bottom: 25px;
+        }
+
+        .info-item i {
+            font-size: 1.25rem;
+            color: var(--primary-wood);
+            margin-top: 3px;
+        }
+
+        .info-item h4 {
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            margin-bottom: 3px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 700;
+        }
+
+        .info-item p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .map-box {
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            background: #e5e3df;
+            min-height: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .map-box i {
+            font-size: 3rem;
+            color: var(--primary-wood);
+            margin-bottom: 15px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-dark);
+            color: rgba(255, 255, 255, 0.8);
+            padding: 60px 20px 20px 20px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-brand h3 {
+            color: var(--white);
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+        }
+
+        .footer-brand p {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+            max-width: 320px;
+        }
+
+        .footer-links h4 {
+            color: var(--white);
+            font-size: 1rem;
+            margin-bottom: 18px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links ul li a {
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .footer-links ul li a:hover {
+            color: var(--accent-amber);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 25px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .disclaimer-box {
+            margin-top: 15px;
+            font-size: 0.75rem;
+            line-height: 1.4;
+            color: rgba(255, 255, 255, 0.4);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero, .about-container, .contact-wrapper {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .hero-title {
+                font-size: 2.4rem;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--white);
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+                border-bottom: 1px solid var(--border-color);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Concept Demo Banner -->
+    <div class="demo-banner">
+        Concept Demo — Not An Official Website
+    </div>
+
+    <!-- Navigation Bar -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-title">Home Style</span>
+                <span class="logo-sub">Furniture Mart</span>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#home">Home</a>
+                <a href="#products">Collections</a>
+                <a href="#about">About</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#contact">Location</a>
+                <a href="tel:+918449311567" class="nav-cta">
+                    <i class="fa-solid fa-phone"></i> Call Now
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fa-solid fa-location-dot"></i> Khatima, Uttarakhand
+                </div>
+                <h1 class="hero-title">Elevate Your Home With Premium Furniture & Lighting</h1>
+                <p class="hero-description">
+                    Discover quality home furnishings, elegant living and bedroom sets, and stunning fancy lights designed to make your space comfortable and stylish.
+                </p>
+                <div class="hero-buttons">
+                    <a href="tel:+918449311567" class="btn btn-primary">
+                        <i class="fa-solid fa-phone"></i> Call Store
+                    </a>
+                    <a href="https://maps.google.com/?q=Home+Style+Furniture+Mart+Khatima+Uttarakhand" target="_blank" rel="noopener" class="btn btn-outline">
+                        <i class="fa-solid fa-location-arrow"></i> Get Directions
+                    </a>
+                </div>
+                <div class="hero-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <span class="rating-text">4.8 / 5 Rating on Local Listings</span>
+                </div>
+            </div>
+            
+            <!-- Hero Image Slot -->
+            <div class="img-slot hero-img-height">
+                <i class="fa-solid fa-image"></i>
+                <span>Main Showroom Image Slot</span>
+                <small>./images/hero-showroom.jpg</small>
+                <img src="./images/hero-showroom.jpg" alt="Showroom Main" onerror="this.style.display='none';">
+            </div>
+        </section>
+
+        <!-- Products / Collections Section -->
+        <section class="products-bg" id="products">
+            <div class="section-header">
+                <span class="section-subtitle">Our Collections</span>
+                <h2 class="section-title">Everything For Your Interior</h2>
+            </div>
+
+            <div class="grid-3">
+                <div class="product-card">
+                    <div>
+                        <div class="product-icon"><i class="fa-solid fa-couch"></i></div>
+                        <h3>Living Room</h3>
+                        <p>Comfortable sofa sets, center tables, and lounge seating curated to elevate your family space.</p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div>
+                        <div class="product-icon"><i class="fa-solid fa-bed"></i></div>
+                        <h3>Bedroom Furniture</h3>
+                        <p>Durable bedframes, mattresses, wardrobes, and bedside setups engineered for ultimate comfort.</p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div>
+                        <div class="product-icon"><i class="fa-solid fa-utensils"></i></div>
+                        <h3>Dining Sets</h3>
+                        <p>Elegant dining tables and comfortable seating sets designed for long-lasting family moments.</p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div>
+                        <div class="product-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                        <h3>Fancy Lights</h3>
+                        <p>Decorative hanging lights, modern chandeliers, and accent lighting choices to brighten your home.</p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div>
+                        <div class="product-icon"><i class="fa-solid fa-rug"></i></div>
+                        <h3>Home Furnishings</h3>
+                        <p>A variety of tasteful decor items and furnishings to complete your home's unique interior look.</p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div>
+                        <div class="product-icon"><i class="fa-solid fa-store"></i></div>
+                        <h3>Custom Selection</h3>
+                        <p>Visit our showroom to explore full catalogues and diverse modern design varieties in person.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <div class="about-container">
+                <div class="about-content">
+                    <span class="section-subtitle">Local Furniture Showroom</span>
+                    <h2>Your Trusted Destination For Home Furniture</h2>
+                    <p>
+                        Home Style Furniture Mart offers a wide variety of quality furniture solutions and modern fancy lights for homeowners across Khatima and nearby areas in Uttarakhand.
+                    </p>
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <div>
+                                <strong>Wide Variety</strong>
+                                <p>Complete setups for living rooms, bedrooms, and dining areas.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <div>
+                                <strong>Fancy Lighting Setup</strong>
+                                <p>Enhance ambient appeal with curated decorative light fixtures.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <div>
+                                <strong>Physical Showroom Visit</strong>
+                                <p>Experience product quality, finish, and comfort firsthand in-store.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- About Image Slot -->
+                <div class="img-slot about-img-height">
+                    <i class="fa-solid fa-store"></i>
+                    <span>Store Entrance / Interior Slot</span>
+                    <small>./images/about-store.jpg</small>
+                    <img src="./images/about-store.jpg" alt="About Store" onerror="this.style.display='none';">
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="products-bg" id="gallery">
+            <div class="section-header">
+                <span class="section-subtitle">Showroom Showcase</span>
+                <h2 class="section-title">Photo Gallery</h2>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- Gallery Slot 1 -->
+                <div class="img-slot gallery-img-height">
+                    <i class="fa-solid fa-image"></i>
+                    <span>Gallery Slot 1</span>
+                    <small>./images/gallery-1.jpg</small>
+                    <img src="./images/gallery-1.jpg" alt="Gallery 1" onerror="this.style.display='none';">
+                </div>
+                <!-- Gallery Slot 2 -->
+                <div class="img-slot gallery-img-height">
+                    <i class="fa-solid fa-image"></i>
+                    <span>Gallery Slot 2</span>
+                    <small>./images/gallery-2.jpg</small>
+                    <img src="./images/gallery-2.jpg" alt="Gallery 2" onerror="this.style.display='none';">
+                </div>
+                <!-- Gallery Slot 3 -->
+                <div class="img-slot gallery-img-height">
+                    <i class="fa-solid fa-image"></i>
+                    <span>Gallery Slot 3</span>
+                    <small>./images/gallery-3.jpg</small>
+                    <img src="./images/gallery-3.jpg" alt="Gallery 3" onerror="this.style.display='none';">
+                </div>
+                <!-- Gallery Slot 4 -->
+                <div class="img-slot gallery-img-height">
+                    <i class="fa-solid fa-image"></i>
+                    <span>Gallery Slot 4</span>
+                    <small>./images/gallery-4.jpg</small>
+                    <img src="./images/gallery-4.jpg" alt="Gallery 4" onerror="this.style.display='none';">
+                </div>
+            </div>
+        </section>
+
+        <!-- Location & Contact -->
+        <section id="contact">
+            <div class="section-header">
+                <span class="section-subtitle">Visit Us</span>
+                <h2 class="section-title">Store Location & Contact</h2>
+            </div>
+
+            <div class="contact-wrapper">
+                <div class="info-card">
+                    <h3>Contact Information</h3>
+
+                    <div class="info-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <h4>Store Address</h4>
+                            <p>SH 29, Bhujia No. 3, Khatima, Charu Beta,<br>Uttarakhand – 262308, India</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <h4>Phone Number</h4>
+                            <p><a href="tel:+918449311567">+91 84493 11567</a></p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fa-solid fa-star"></i>
+                        <div>
+                            <h4>Store Rating</h4>
+                            <p>4.8 / 5 Rating</p>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 30px;">
+                        <a href="tel:+918449311567" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                            <i class="fa-solid fa-phone"></i> Contact Store
+                        </a>
+                    </div>
+                </div>
+
+                <div class="map-box">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <h3 style="font-size: 1.3rem; margin-bottom: 10px; color: var(--primary-dark);">Find Our Store</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 20px; font-size: 0.95rem;">
+                        Located conveniently along SH 29 in Khatima, Charu Beta.
+                    </p>
+                    <a href="https://maps.google.com/?q=Home+Style+Furniture+Mart+Khatima+Uttarakhand" target="_blank" rel="noopener" class="btn btn-outline">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Open in Google Maps
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h3>Home Style Furniture Mart</h3>
+                <p>Deals in all types of quality home furniture, furnishings, and decorative fancy lights in Khatima, Uttarakhand.</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Collections</a></li>
+                    <li><a href="#about">About Store</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Location</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li><a href="tel:+918449311567"><i class="fa-solid fa-phone"></i> +91 84493 11567</a></li>
+                    <li><span><i class="fa-solid fa-location-dot"></i> Khatima, Uttarakhand</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; Home Style Furniture Mart. All Rights Reserved.</p>
+            <div class="disclaimer-box">
+                <strong>CONCEPT DEMO — NOT AN OFFICIAL WEBSITE</strong><br>
+                This is an unofficial website concept created by Vansh Builds Websites for demonstration purposes only. It is not affiliated with or officially associated with the business shown.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Navigation Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const navLinks = document.getElementById('navLinks');
+
+            mobileMenuBtn.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+            });
+
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
